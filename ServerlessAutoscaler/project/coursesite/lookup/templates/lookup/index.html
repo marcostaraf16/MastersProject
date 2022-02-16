@@ -1,0 +1,22 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'lookup/style.css' %}">
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <h1>Class Lookup</h1>
+        <ul>
+            {% for course in all_courses %}
+            <li><a href="{% url 'lookup:detail' course.id %}">{{ course.course_name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

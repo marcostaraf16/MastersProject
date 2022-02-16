@@ -1,0 +1,5 @@
+[client]
+database = serverlessautoscale
+user = root
+password = Password
+default-character-set = utf8
